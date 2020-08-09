@@ -52,6 +52,11 @@ function pickColor(color) {
     ctx.strokeStyle = color;
 }
 
+function setBrushSize(size) {
+    ctx.lineWidth = size * 2;
+    ctx.lineJoin = "round";
+}
+
 function drawline(p1, p2) {
     ctx.beginPath();
     ctx.moveTo(p1.x, p1.y);
