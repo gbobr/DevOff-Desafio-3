@@ -8,6 +8,8 @@ var canvasOffset;
 var offsetX;
 var offsetY;
 
+var currentColor = '#000000';
+
 function init() {
     console.log("Dibujando...");
     canvas = document.getElementById("devoff-canvas");
@@ -49,7 +51,8 @@ function endStroke() {
 }
 
 function pickColor(color) {
-    ctx.strokeStyle = color;
+    currentColor = color;
+    ctx.strokeStyle = currentColor;
 }
 
 function setBrushSize(size) {
@@ -63,6 +66,12 @@ function drawline(p1, p2) {
     ctx.lineTo(p2.x, p2.y);
     ctx.closePath();
     ctx.stroke();
+}
+
+function eraser() {
+    ctx.lineWidth = 20 * 2;
+    ctx.lineJoin = "round";
+    ctx.strokeStyle = "#ffffff";
 }
 
 function save() {
