@@ -59,3 +59,14 @@ function drawline(p1, p2) {
     ctx.closePath();
     ctx.stroke();
 }
+
+function save() {
+    var a = document.createElement('a');
+
+    a.href = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
+    a.download = "devoff.png";
+    a.style = "display: none;"
+
+    document.body.appendChild(a);
+    a.click();
+}
