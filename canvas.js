@@ -74,6 +74,11 @@ function eraser() {
     ctx.strokeStyle = "#ffffff";
 }
 
+function setCanvasSize(width, height) {
+    ctx.canvas.width = width;
+    ctx.canvas.height = height;
+}
+
 function save() {
     var a = document.createElement('a');
 
