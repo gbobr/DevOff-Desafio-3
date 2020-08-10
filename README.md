@@ -1,3 +1,17 @@
+# Solucion by @GermanBobr
+
+Disclaimer: Nunca habia usado canvas. Lei la documentación 15 minutos antes del challenge.
+
+Me puse como objetivo lograr la mayor cantidad de features en 1 hora durante el stream.
+
+Podés ver cómo quedó en el tag challenge de este mismo repo: https://github.com/gbobr/DevOff-Desafio-3/tree/challenge.
+
+El status actual del repositorio tiene varias mejoras que agregué después del desafío.
+
+Se sigue viendo horrible, pero está mejor de lo que había xD
+
+Podes ver mi solucion online aca: https://dev-off-desafio-3.vercel.app/
+
 ![](https://static-cdn.jtvnw.net/jtv_user_pictures/fb425ddf-5e67-4c84-9210-8065809675f7-profile_banner-480.png)
 # Desafío 3 - 09/08/2020
 
