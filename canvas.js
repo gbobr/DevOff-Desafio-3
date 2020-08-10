@@ -83,6 +83,14 @@ function colorSelected() {
     pickColor($('#color').val());
 }
 
+function sizeChange() {
+    setBrushSize($('#size').val());
+}
+
+function updateCanvasSize() {
+    setCanvasSize($("#lienzo-x").val(), $("#lienzo-y").val())
+}
+
 function save() {
     var a = document.createElement('a');
 

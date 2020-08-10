@@ -14,14 +14,20 @@
         <canvas id="devoff-canvas" width="640" height="480">
             Tu browser est&aacute; re obsoleto. Actualizate porfa.
         </canvas>
-        <a href="#" onclick="setBrushSize(10);">Grueso</a>
-        <a href="#" onclick="setBrushSize(1);">Fino</a>
-        <a href="#" onclick="eraser();">Borrar</a>
-        <a href="#" onclick="setCanvasSize(800,600);">Lienzo grande</a>
-        <button onclick="save();">Descargar imagen</button>
-
+    
         <div id="controles">
-            <label for="color">Color:</label><input type="color" name="color" value="#000000" id="color" onchange="colorSelected()">
+            <div><label for="color">Color:</label><input type="color" name="color" value="#000000" id="color" onchange="colorSelected()"></div>
+            <div><label for="size">Tamaño del pincel:</label><input name="size" id="size" type="number" value="1" onchange="sizeChange()" /></div>
+            
+            <div>
+                <label for="lienzo-x">Tamaño del lienzo:</label>
+                <input name="lienzo-x" id="lienzo-x" type="number" value="640"/> x 
+                <input name="lienzo-y" id="lienzo-y" type="number" value="480"/>
+                <button onclick="updateCanvasSize()">Aplicar</button>
+            </div>
+
+            <div><button onclick="eraser();">Goma de borrar</button></div>
+            <div><button onclick="save();">Descargar imagen</button></div>
         </div>
 
     </body>
