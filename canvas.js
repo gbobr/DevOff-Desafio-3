@@ -8,7 +8,10 @@ var canvasOffset;
 var offsetX;
 var offsetY;
 
-var currentColor = '#000000';
+var fgColor = '#000000';
+var bgColor = '#ffffff';
+
+var tool = "pencil"
 
 function init() {
     console.log("Dibujando...");
@@ -51,8 +54,7 @@ function endStroke() {
 }
 
 function pickColor(color) {
-    currentColor = color;
-    ctx.strokeStyle = currentColor;
+    ctx.strokeStyle = color;
 }
 
 function setBrushSize(size) {
@@ -68,19 +70,19 @@ function drawline(p1, p2) {
     ctx.stroke();
 }
 
-function eraser() {
-    ctx.lineWidth = 20 * 2;
-    ctx.lineJoin = "round";
-    ctx.strokeStyle = "#ffffff";
-}
-
 function setCanvasSize(width, height) {
     ctx.canvas.width = width;
     ctx.canvas.height = height;
 }
 
 function colorSelected() {
-    pickColor($('#color').val());
+    fgColor = $('#color').val();
+    if(tool == 'pencil') pickColor(fgColor);
+}
+
+function colorBgSelected() {
+    bgColor = $('#color-bg').val();
+    if(tool == 'eraser') pickColor(bgColor);
 }
 
 function sizeChange() {
@@ -100,4 +102,13 @@ function save() {
 
     document.body.appendChild(a);
     a.click();
+}
+
+function setTool() {
+    tool = $("input[name='tool']:checked").val();
+    if(tool == 'pencil') {
+        pickColor(fgColor);
+    } else { 
+        pickColor(bgColor);
+    }
 }
