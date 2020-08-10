@@ -79,6 +79,10 @@ function setCanvasSize(width, height) {
     ctx.canvas.height = height;
 }
 
+function colorSelected() {
+    pickColor($('#color').val());
+}
+
 function save() {
     var a = document.createElement('a');
 
